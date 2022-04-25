@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca Nacional</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+    <body>
+
+        <header>
+            <nav>
+                <section class="contenedor nav">
+
+                    <h2>Biblioteca Nacional</h2>
+
+                    <div class="enlaces-header">
+                        <a href="index.html">Inicio</a>
+                    </div>
+
+                </section>
+            </nav>
+        </header>
+
+        <section>
+
+            <div class="contenedorFormularios">
+
+                <form action="" class="form" name="f_user"  method="post" onsubmit="return login()">
+                    <div class="form-header">
+                        <h3 class="form-title">Iniciar sesión</h3>
+                    </div>
+
+                    <label for="dni" class="form-label">DNI:</label>
+                    <input type="text" name ="txtDni" id="dni" class="form-input" placeholder="Escriba su DNI">
+
+                    <label for="contrasena" class="form-label">Contraseña:</label>
+                    <input type="password" name="txtContrasena" id="contrasena" class="form-input" placeholder="Escriba su contraseña">
+
+                    <input type="submit" class="btn-submit" value="Ingresar" >
+
+                    <p>¿No tienes una cuenta?<a href="registroSesion.html">Regístrate</a></p>
+
+                </form>
+
+            </div>
+
+        </section>
+    </body>
+
+    <footer>
+        <div class="partFooter">
+            <h2>Biblioteca Nacional © 2021</h2>
+        </div>
+
+    </footer>
+
+    <script type="text/javascript">
+        function cerrar() {
+            window.close()
+        }
+        function login() {
+            if (document.f_user.txtDni.value == "") {
+                alert("Atención, debe ingresar el DNI ");
+                document.f_user.txtDni.focus();
+                return;
+            }
+            if (document.f_user.txtContrasena.value == "") {
+                alert("Atención, debe ingresar la contraseña ");
+                document.f_user.txtContrasena.focus();
+                return;
+            }
+            document.f_user.action = 'inicioSesion.php';
+            document.f_user.submit();
+        }
+    </script>
+
+
+</html>
