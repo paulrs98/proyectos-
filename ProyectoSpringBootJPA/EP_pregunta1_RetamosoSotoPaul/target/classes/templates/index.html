@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<title>Tienda Yogurt</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js"></script>
+</head>
+<body>
+<h2>Vendiendo Yogurt</h2>
+<form  method="post" th:action="@{/vender}" th:object="${boleta}">
+
+<p>
+<label>Ingresar el codigo de la boleta</label>
+<input type="number" th:field="*{codigoboleta}" required="required" placeholder="Ingrese el codigo de la boleta">
+</p>
+<p>
+<label>Ingresar el nombre del cliente</label>
+<input type="text" th:field="*{nombrecliente}" required="required" placeholder="Ingrese nombre del cliente">
+</p>
+<p>
+<label>Ingresar el DNI del cliente</label>
+<input type="text" th:field="*{dni}" required="required" placeholder="Ingrese dni del cliente">
+</p>
+<p>
+<label>Ingresar el codigo del Yogurt</label>
+<input type="number" th:field="*{codigoyogurt}" required="required" placeholder="Ingrese el codigo del yogurt">
+</p>
+<p>
+<label>Ingresar la cantidad de Yogurt a comprar</label>
+<input type="number" th:field="*{cantidad}" required="required" placeholder="Ingrese cantidad">
+</p>
+
+<input type="submit" value="enviar">
+<p>
+
+
+<strong>Reporte Ventas de Yogurt</strong><br>
+<strong>Codigo de la boleta:</strong> <span th:text="${b_codigoboleta}"></span><br>
+<strong>Nombre del Cliente:</strong> <span th:text="${b_nombrecliente}"></span><br>
+<strong>DNI:</strong> <span th:text="${b_dni}"></span><br>
+<strong>Codigo del yogurt:</strong> <span th:text="${b_codigoyogurt}"></span><br>
+<strong>Precio:</strong> <span th:text="${b_precio}"></span><br>
+<strong>Cantidad:</strong> <span th:text="${b_cantidad}"></span><br>
+<strong>Importe de compra:</strong> <span th:text="${b_importcompra}"></span><br>
+<strong>Importe de Descuento:</strong> <span th:text="${b_importdesc}"></span><br>
+<strong>Importe Total:</strong> <span th:text="${b_importtotal}"></span><br>
+<strong>Obsequio:</strong> <span th:text="${b_obsequio}"></span><br>
+</form>
+</body>
+</html>
