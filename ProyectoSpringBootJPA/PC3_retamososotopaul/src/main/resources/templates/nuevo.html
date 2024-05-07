@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<title>nuevo</title>
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+	crossorigin="anonymous">
+<script
+	src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+	integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+	crossorigin="anonymous"></script>
+</head>
+<body>
+	<div class="container-sm">
+		<header class="text-center">
+			<h1 class="display-6">Nuevo Empleado</h1>
+		</header>
+		<form class="row g-3" th:action="@{/guardar}" th:object="${empleado}"
+			method="post" autocomplete="off">
+
+			<div class="col-md-4">
+				<label for="exampleFormControlTextarea1" class="form-label">Ingrese
+					el apellido del empleado</label> <input class="form-control" type="text"
+					th:field="*{apellido}" placeholder="" required="required">
+			</div>
+			<div class="col-md-4">
+				<label for="exampleFormControlTextarea1" class="form-label">Ingrese
+					el nombre del empleado</label> <input class="form-control" type="text"
+					th:field="*{nombre}" placeholder="" required="required">
+			</div>
+
+			<div class="col-md-4">
+				<label for="exampleFormControlTextarea1" class="form-label">Ingrese
+					el telefono empleado</label> <input class="form-control" type="text"
+					th:field="*{telefono}" placeholder="" required="required">
+			</div>
+
+			<div class="col-md-4">
+				<label for="exampleFormControlTextarea1" class="form-label">Ingrese
+					la direccion del empleado</label> <input class="form-control" type="text"
+					th:field="*{direccion}" placeholder="" required="required">
+			</div>
+
+			<div class="col-md-4">
+				<label for="exampleFormControlTextarea1" class="form-label">Ingrese
+					la fecha de nacimiento del empleado</label> <input class="form-control"
+					type="date" th:field="*{fecha_nacimiento}" placeholder="" required="required">
+			</div>
+
+			<div class="col-md-4">
+				<label for="exampleFormControlTextarea1" class="form-label">Ingrese
+					las observaciones del empleado</label>
+				<textarea th:field="*{observaciones}" class="form-control"
+					id="exampleFormControlTextarea1" rows="3"></textarea>
+			</div>
+
+			<div class="col-md-4">
+				<label for="exampleFormControlTextarea1" class="form-label">Ingrese
+					el sueldo del empleado</label>
+				<div class="col-md-4">
+					<input class="form-control" type="text" th:field="*{sueldo}"
+						placeholder="" required="required">
+				</div>
+			</div>
+			
+			<div class="display-6">
+				<input class="btn btn-outline-info" type="submit" value="Guardar">
+			</div>
+		</form>
+	</div>
+</body>
+</html>
