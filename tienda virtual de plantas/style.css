@@ -1,0 +1,424 @@
+/* Estilos para el encabezado */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #336600;
+    color: white;
+  }
+  
+  nav ul {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+  }
+  
+  nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  /* Estilos para el banner principal */
+  
+  .banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+    background-image: url("https://via.placeholder.com/800x400");
+    background-size: cover;
+    color: white;
+    text-align: center;
+  }
+  
+  .banner h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .banner p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .banner button {
+    padding: 1rem 2rem;
+    border: none;
+    background-color: #336600;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  /* Estilos para las categorías de plantas */
+  
+  .categorias {
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .categorias h3 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .categorias ul {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    list-style: none;
+  }
+  
+  .categorias li a {
+    font-size: 1.5rem;
+    color: #336600;
+    text-decoration: none;
+    border: 2px solid #336600;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    transition: all 0.3s ease;
+  }
+  
+  .categorias li a:hover {
+    background-color: #336600;
+    color: white;
+  }
+  
+  /* Estilos para las promociones especiales */
+  
+  .promociones {
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .promociones h3 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .promociones ul {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    list-style: none;
+  }
+  
+  .promociones li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .promociones img {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 1rem;
+  }
+  
+  .promociones h4 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .promociones p {
+    font-size: 1.2rem;
+  }
+  /* Estilos para la sección de testimonios */
+  .testimonios {
+    padding: 2rem;
+    text-align: center;
+    background-color: #f2f2f2;
+  }
+  
+  .testimonios h3 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .testimonios .slider {
+    display: flex;
+    overflow-x: scroll;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .testimonios .slider::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .testimonios .card {
+    width: 300px;
+    background-color: white;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .testimonios .card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .testimonios img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+  }
+  
+  .testimonios p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+  }
+  
+  .testimonios h4 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .testimonios .author {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+
+
+  /* Estilos para la sección de la tienda virtual */
+
+.tienda {
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .tienda h3 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .tienda ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    list-style: none;
+  }
+  
+  .tienda li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .tienda img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 1rem;
+  }
+  
+  .tienda h4 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .tienda p {
+    font-size: 1.2rem;
+  }
+  
+  .tienda button {
+    padding: 1rem 2rem;
+    border: none;
+    background-color: #336600;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-top: 1rem;
+  }
+  
+  .tienda button:hover {
+    background-color: #5cbf5c;
+  }
+  
+  /* Estilos para el pie de página */
+  
+  footer {
+    padding: 2rem;
+    background-color: #f2f2f2;
+    text-align: center;
+  }
+  
+  footer p {
+    font-size: 1.2rem;
+  }
+  
+  footer ul {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+    list-style: none;
+  }
+  
+  footer ul li a {
+    color: #336600;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+
+  #carrito {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  #carrito h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  
+  #carrito ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+  }
+  
+  #carrito ul li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+  }
+  
+  #carrito ul li img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    margin-right: 10px;
+  }
+  
+  #carrito ul li h4 {
+    font-size: 1rem;
+    margin: 0;
+  }
+  
+  #carrito ul li p {
+    font-size: 0.8rem;
+    margin: 0;
+    color: #666;
+  }
+  
+  #carrito ul li button {
+    background-color: transparent;
+    border: none;
+    color: #999;
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
+  
+  #carrito ul li button:hover {
+    color: #333;
+  }
+  
+  #carrito p {
+    font-size: 1.2rem;
+    margin: 0;
+  }
+  
+  #carrito p span {
+    font-weight: bold;
+    margin-left: 5px;
+  }
+  
+  #carrito p:last-of-type {
+    margin-top: 20px;
+    font-size: 1.4rem;
+  }
+  
+  .testimonios {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .testimonios h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .testimonios-carousel {
+    margin: 3rem 0;
+  }
+  
+  .testimonio {
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 0.5rem;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .testimonio p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+  }
+  
+  .testimonio h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 2rem;
+  }
+  
+  .anterior, .siguiente {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    padding: 1rem;
+    font-size: 1.5rem;
+    margin: 0 1rem;
+    cursor: pointer;
+  }
+  
+  .anterior:hover, .siguiente:hover {
+    background-color: #ccc;
+  }
+  
+  .slick-dots {
+    text-align: center;
+    margin-top: 2rem;
+  }
+  
+  .slick-dots li {
+    display: inline-block;
+    margin: 0 0.5rem;
+  }
+  
+  .slick-dots li button {
+    font-size: 0;
+    line-height: 0;
+    display: block;
+    width: 1rem;
+    height: 1rem;
+    border: none;
+    border-radius: 50%;
+    background-color: #ccc;
+    cursor: pointer;
+  }
+  
+  .slick-dots li.slick-active button {
+    background-color: #555;
+  }
+  
