@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es" ng-app="filtrodatos">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca Nacional</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <script type="text/javascript" src="angular/angular.min.js"></script>
+</head>
+
+
+<body>
+
+    <header>
+        <nav>
+            <section class="contenedor nav">
+
+                <h2>Biblioteca Nacional</h2>
+
+                <div class="enlaces-header">
+                    <a href="index.html">Cerrar sesión</a>
+                </div>
+
+            </section>
+        </nav>
+    </header>
+
+    <style type="text/css">
+        #formularioPedido,
+        #cerrar {
+            display: none;
+        }
+    </style>
+
+
+    <div class="contenedor">
+        <section class="contenido-header">
+
+            <section class="textos-header">
+
+
+                <div ng-controller="listas">
+
+
+                    <h2>Buscar Libro:</h2>
+                    <input type="text" ng-model="buscarLibro">
+                    
+                    <div>
+                     
+                        <ul>
+                            <li ng-repeat="libro in libros | filter: buscarLibro | orderBy:'+nombre'">
+                                <h2>{{libro.categoria}}</h2>
+                                <h4>Nombre del libro: {{libro.nombre}},
+                                   <br> Stock: {{libro.stock}}</h4>
+                            </li>
+                        </ul>
+                       
+                    </div>
+
+
+                </div>
+                
+
+                <script type="text/javascript">
+
+                    var miApp = angular.module('filtrodatos', []);
+                    miApp.controller('listas', function ($scope) {
+
+                            $scope.libros = [
+                                {
+                                    
+                                    categoria: 'Algoritmica',
+                                    nombre: 'Introducción a los algoritmos',
+                                    stock: 'disponible'
+                                },
+                                {
+                                    categoria: 'Mysql',
+                                    nombre: 'Learning Mysql',
+                                    stock: 'no disponible'
+                                },
+                                {
+                                    categoria: 'Inglés',
+                                    nombre: 'English Gammar 1',
+                                    stock: 'disponible'
+                                },
+                                {
+                                    categoria: 'Matematica Basica 1',
+                                    nombre: 'Libro de vectores y matrices',
+                                    stock: 'disponible'
+                                },
+                                {
+                                    categoria: 'Programacion',
+                                    nombre: 'Eloquent JavaScript',
+                                    stock: 'disponible'
+                                },
+                                
+                                {
+                                    categoria: 'Quimica',
+                                    nombre: 'Pruebas Fisioquimicas',
+                                    stock: 'no disponible'
+                                }
+                            ];
+                        
+                    });
+                </script>
+
+            </section>
+
+
+            <section class="textos-header">
+                <h3>Realizar Pedido de Libros</h3>
+                <a href="" onclick="mostrarFormulario()">Ver formulario de pedido</a>
+                <a href="" onclick="ocultarFormulario()">Cerrar formulario</a>
+
+                <div id="cerrar">
+                    <h3></h3>
+                </div>
+
+                <script type="text/javascript">
+                    function mostrarFormulario() {
+                        document.getElementById('formularioPedido').style.display = 'block';
+                        document.getElementById('cerrar').style.display = 'none';
+                    }
+
+                    function ocultarFormulario() {
+                        document.getElementById('formularioPedido').style.display = 'none';
+                        document.getElementById('cerrar').style.display = 'block';
+                    }
+                </script>
+            </section>
+
+        </section>
+    </div>
+
+
+
+    <section>
+        <div id="formularioPedido" class="contenedorFormularios">
+            <form action="" method="post" class="form">
+                <div class="form-header">
+                    <h3 class="form-title">Préstamos de Libros</h3>
+                </div>
+                <label for="numprestamo" class="form-label">Código de Préstamo:</label>
+                <input type="text" name="txtNumprestamo" id="numprestamo" class="form-input" placeholder="">
+
+                <label for="idusuario" class="form-label">DNI:</label>
+                <input type="numer" min="00000000" max="99999999" name="txtDni" id="dni" class="form-input"
+                    placeholder="">
+
+                <label for="fecha" class="form-label">Fecha de solicitud:</label>
+                <input type="date" name="txtFecha" id="fecha" class="form-input" placeholder="">
+
+                <label for="nomlibros" class="form-label">Nombre del Libro seleccionado:</label>
+                <input type="text" name="txtNomLibro" id="nomLibro" class="form-input" placeholder="">
+
+                <input type="submit" onclick="clicked();" class="btn-submit" value="Solicitar">
+
+                <script type="text/javascript">
+
+                    function clicked() {
+                        alert('Solicitud Enviada!');
+                    }
+                </script>
+
+            </form>
+        </div>
+    </section>
+
+</body>
+
+<footer>
+    <div class="partFooter">
+        <h2>Biblioteca Nacional © 2021</h2>
+    </div>
+</footer>
+
+</html>

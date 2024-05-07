@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca Nacional</title>
+    <link rel="stylesheet" href="css/estilos.css">
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <section class="contenedor nav">
+
+                <h2>Biblioteca Nacional</h2>
+
+                <div class="enlaces-header">
+                    <a href="index.html">Inicio</a>
+                </div>
+
+            </section>
+        </nav>
+    </header>
+
+
+    <section>
+        <div class="contenedorFormularios">
+            <form action="" method="post" class="form">
+                <div class="form-header">
+                    <h3 class="form-title">Reserva sala de videos</h3>
+                </div>
+
+
+                <label for="numreserva" class="form-label">Numero de reserva:</label>
+                <input type="text" name="txtNumreserva" id="numreserva" class="form-input" placeholder="">
+
+                <label for="fecha" class="form-label">Fecha de reserva:</label>
+                <input type="date" name="txtFecha" id="fecha" class="form-input" placeholder="">
+
+                <label for="capacidad" class="form-label">Capacidad de personas:</label>
+                <input type="text" name="txtCapacidad" id="capacidad" class="form-input" placeholder="">
+
+                <label for="cantvideos" class="form-label">Videos a visualizar:</label>
+                <input type="text" name="txtCantvideos" id="cantvideos" class="form-input"
+                    placeholder="Escriba la cantidad de videos a visualizar">
+
+                <label for="dispvideos" class="form-label">Disponibilidad de videos:</label>
+                <input type="text" name="txtDispvideos" id="dispvideos" class="form-input" placeholder="">
+
+                <label for="turnosocilitado" class="form-label">Turno Solicitado</label>
+                <select id="cboturno">
+                    <option value="Selec">Seleccione</option>
+                    <option value="Man">Mañana</option>
+                    <option value="Tard">Tarde</option>
+                </select>
+                <script type="text/javascript">
+                    function clicked() {
+                        alert('Reserva Exitosa!'), ("Reserva Erronea!");
+                    }
+                </script>
+
+                <input type="submit" onclick="clicked();" class="btn-submit" value="Reservar">
+
+
+                <label for="estadoreserva" class="form-label">Estado de la reserva:</label>
+                <input type="text" name="txtEstadoreserva" id="estadoreserva" class="form-input" placeholder="">
+
+
+            </form>
+        </div>
+    </section>
+</body>
+
+<footer>
+    <div class="partFooter">
+        <h2>Biblioteca Nacional © 2021</h2>
+    </div>
+
+</footer>
+
+</html>

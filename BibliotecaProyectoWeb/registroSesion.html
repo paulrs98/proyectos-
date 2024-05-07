@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca Nacional</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+    <body>
+
+        <header>
+            <nav>
+                <section class="contenedor nav">
+
+                    <h2>Biblioteca Nacional</h2>
+
+                    <div class="enlaces-header">
+                        <a href="index.html">Inicio</a>
+                    </div>
+
+                </section>
+            </nav>
+        </header>
+
+        <section>
+            <div class="contenedorFormularios">
+                <form  action="registro.php" method="post" class="form">
+                    <div class="form-header">
+                        <h3 class="form-title">Registro</h3>
+                    </div>
+                    <label for="dni" class="form-label">DNI:</label>
+                    <input type="text" name="txtDni" id="dni" class="form-input" placeholder="Escriba su DNI">
+
+                    <label for="nombres" class="form-label">Nombres:</label>
+                    <input type="text" name="txtNombres" id="nombres" class="form-input" placeholder="Escriba su nombre">
+
+                    <label for="apellidos" class="form-label">Apellidos:</label>
+                    <input type="text"  name="txtApellidos" id="apellidos" class="form-input" placeholder="Escriba sus apellidos">
+
+                    <label for="edad" class="form-label">Edad:</label>
+                    <input type="text" name="txtEdad" id="edad" class="form-input" placeholder="Escriba su edad">
+
+                    <label for="correo" class="form-label">Correo:</label>
+                    <input type="text" name="txtCorreo" id="correo" class="form-input" placeholder="Escriba su correo electrónico">
+
+                    <label for="contrasena" class="form-label">Contraseña:</label>
+                    <input type="password" name="txtContrasena" id="contrasena" class="form-input" placeholder="Escriba su contraseña">
+
+                    <input type="submit" class="btn-submit" value="Registrar">
+
+
+                    <p>¿Tienes una cuenta?<a href="inicioSesion.html"> Inicia sesión</a></p>
+                </form>
+            </div>
+        </section>
+    </body>
+
+    <footer>
+        <div class="partFooter">
+            <h2>Biblioteca Nacional © 2021</h2>
+        </div>
+
+    </footer>
+
+</html>
